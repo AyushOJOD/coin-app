@@ -1,0 +1,94 @@
+{
+  "id": "ad51acfc-2ebf-47dd-bd60-e25aa8b3a6fa",
+  "prevId": "3f737c78-9f42-4017-9aa8-59e76ca05686",
+  "version": "7",
+  "dialect": "postgresql",
+  "tables": {
+    "public.blocks": {
+      "name": "blocks",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "block_number": {
+          "name": "block_number",
+          "type": "bigint",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "timestamp": {
+          "name": "timestamp",
+          "type": "timestamp",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "hash": {
+          "name": "hash",
+          "type": "varchar(128)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "mix_digest": {
+          "name": "mix_digest",
+          "type": "varchar(128)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "base_fee": {
+          "name": "base_fee",
+          "type": "bigint",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "coinbase": {
+          "name": "coinbase",
+          "type": "varchar(128)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "latest_tx_hash": {
+          "name": "latest_tx_hash",
+          "type": "varchar(128)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "tx_count": {
+          "name": "tx_count",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "blocks_block_number_unique": {
+          "name": "blocks_block_number_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "block_number"
+          ]
+        }
+      },
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    }
+  },
+  "enums": {},
+  "schemas": {},
+  "sequences": {},
+  "roles": {},
+  "policies": {},
+  "views": {},
+  "_meta": {
+    "columns": {},
+    "schemas": {},
+    "tables": {}
+  }
+}

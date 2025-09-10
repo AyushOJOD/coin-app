@@ -1,0 +1,1 @@
+ALTER TABLE "blocks" ADD CONSTRAINT "blocks_block_number_unique" UNIQUE("block_number");
